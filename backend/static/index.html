@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แหล่งท่องเที่ยว</title>
+    <script src="/static/script.js" defer></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin : 50px;}
+        button { margin: 5px; padding: 8px 16px; cursor: pointer; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color:rgb(164, 233, 53); color: white; cursor: pointer; }
+        .search{width: 50%; padding: 8px; margin-bottom: 20px; border-radius: 10px; border: 1px solid #ddd;}
+    </style>
+</head>
+<body>
+    <h2 id="title">ข้อมูลสถานที่ท่องเที่ยว</h2>
+    <button onclick="changeLanguage('th')">TH ไทย</button>
+    <button onclick="changeLanguage('en')">EN English</button>
+    <br><br>
+    <input type="text" id="search" placeholder="🔍 ค้นหา..." onkeyup="filterData()" class = "search">
+    
+    <table>
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">ชื่อ 🔽</th>
+                <th onclick="sortTable(1)">ที่ตั้ง 🔽</th>
+                <th onclick="sortTable(2)">ประเภท 🔽</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+</body>
+</html>
